@@ -1,0 +1,58 @@
+/* ==========================================================================
+   CreativeXpressions — Typography System
+   Two display voices for one idea: "Soul & Body".
+     - Soul  → Cormorant Garamond italic: quiet, worshipful, handwritten-hymn feel
+     - Body  → Unbounded: bold, geometric, street/urban movement energy
+     - Text  → Work Sans: calm, legible workhorse for NL + EN reading
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,500;1,600&family=Unbounded:wght@400;600;700;800&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  --font-soul: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+  --font-body-display: 'Unbounded', 'Arial Black', sans-serif;
+  --font-text: 'Work Sans', 'Segoe UI', Roboto, sans-serif;
+
+  /* Type scale */
+  --fs-eyebrow: 0.8rem;
+  --fs-body: 1rem;
+  --fs-lead: 1.2rem;
+  --fs-h4: 1.4rem;
+  --fs-h3: 1.9rem;
+  --fs-h2: 2.6rem;
+  --fs-h1: clamp(2.6rem, 6vw, 5rem);
+  --fs-quote: clamp(1.4rem, 3vw, 2.1rem);
+
+  --lh-tight: 1.1;
+  --lh-normal: 1.5;
+  --lh-loose: 1.75;
+
+  --ls-eyebrow: 0.14em;
+  --ls-display: 0.01em;
+}
+
+h1, h2, h3, .font-display {
+  font-family: var(--font-body-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-display);
+  font-weight: 700;
+}
+
+.font-soul, blockquote, .eyebrow-soul {
+  font-family: var(--font-soul);
+  font-style: italic;
+  font-weight: 500;
+}
+
+body, p, li, label, input, textarea, select, button, td, th {
+  font-family: var(--font-text);
+  font-weight: 400;
+}
+
+.eyebrow {
+  font-family: var(--font-text);
+  font-weight: 600;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+}

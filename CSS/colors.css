@@ -1,0 +1,96 @@
+/* ==========================================================================
+   CreativeXpressions — Color System
+   Palette: "Sacred Bloom" — pulled from the CreativeXpressions logo
+   (purple + blue) and extended with a warm gold for the "hope" the
+   founder speaks about, on a soft lavender-white paper tone.
+   ========================================================================== */
+
+:root {
+  /* Brand core (from logo) */
+  --color-purple: #6f4396;
+  --color-purple-deep: #45285f;
+  --color-purple-soft: #efe6f5;
+  --color-blue: #3d57a6;
+  --color-blue-soft: #e6eaf6;
+
+  /* Accent — hope / worship / light */
+  --color-gold: #c9a23f;
+  --color-gold-deep: #a3812c;
+  --color-gold-soft: #f3e9cd;
+
+  /* Neutrals */
+  --color-ink: #231f20;
+  --color-ink-soft: #58525c;
+  --color-paper: #f7f4fa;
+  --color-paper-alt: #ffffff;
+  --color-line: #e3dbec;
+  --color-line-strong: #cabcd9;
+
+  /* Semantic */
+  --color-bg: var(--color-paper);
+  --color-surface: var(--color-paper-alt);
+  --color-text: var(--color-ink);
+  --color-text-muted: var(--color-ink-soft);
+  --color-primary: var(--color-purple);
+  --color-primary-hover: var(--color-purple-deep);
+  --color-secondary: var(--color-blue);
+  --color-accent: var(--color-gold);
+  --color-accent-hover: var(--color-gold-deep);
+  --color-border: var(--color-line);
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #45285f 0%, #6f4396 45%, #3d57a6 100%);
+  --gradient-glow: radial-gradient(circle at 30% 20%, rgba(201, 162, 63, 0.35), transparent 55%);
+
+  /* Feedback */
+  --color-success: #3c7a4e;
+  --color-success-bg: #e7f2ea;
+  --color-error: #a5332a;
+  --color-error-bg: #f7e6e4;
+
+  /* Shadows (tinted with brand purple, not flat grey) */
+  --shadow-sm: 0 1px 2px rgba(69, 40, 95, 0.08);
+  --shadow-md: 0 8px 24px rgba(69, 40, 95, 0.12);
+  --shadow-lg: 0 20px 48px rgba(69, 40, 95, 0.18);
+}
+
+/* ---- Alternate palette hooks (see other 2 recommended schemes) ----
+   Swap by adding one of these classes to <html>, e.g.
+   <html class="theme-golden-hour"> or <html class="theme-midnight">
+   These are provided as a starting point if you want to try another mood. */
+
+html.theme-golden-hour {
+  --color-purple: #b5502e;
+  --color-purple-deep: #7c3419;
+  --color-purple-soft: #f7e3d6;
+  --color-blue: #234b43;
+  --color-blue-soft: #e2ece9;
+  --color-gold: #e8a23d;
+  --color-gold-deep: #b97a22;
+  --color-gold-soft: #fbe9cf;
+  --color-ink: #2a1c14;
+  --color-ink-soft: #6b5346;
+  --color-paper: #faf3ea;
+  --color-paper-alt: #ffffff;
+  --color-line: #efd9c3;
+  --color-line-strong: #d9b48c;
+  --gradient-hero: linear-gradient(135deg, #7c3419 0%, #b5502e 50%, #e8a23d 100%);
+}
+
+html.theme-midnight {
+  --color-purple: #a889d1;
+  --color-purple-deep: #7a56ad;
+  --color-purple-soft: #241a33;
+  --color-blue: #6b86d6;
+  --color-blue-soft: #1c2438;
+  --color-gold: #e7c069;
+  --color-gold-deep: #f0d28c;
+  --color-gold-soft: #302816;
+  --color-ink: #f4f0f8;
+  --color-ink-soft: #c5bccf;
+  --color-paper: #17121e;
+  --color-paper-alt: #1f1a29;
+  --color-line: #362b47;
+  --color-line-strong: #4d3d63;
+  --gradient-hero: linear-gradient(135deg, #17121e 0%, #2f2044 55%, #1c2438 100%);
+}
