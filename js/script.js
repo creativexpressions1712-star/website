@@ -386,7 +386,7 @@
     return valid;
   }
 
-  function wireForm(formId, statusId, successKey) {
+  function wireForm(formId, statusId, successKey, formType) {
     var form = document.getElementById(formId);
     var status = document.getElementById(statusId);
     if (!form) return;
@@ -412,17 +412,35 @@
         return;
       }
 
-      // No backend is connected yet. In production, replace this block with
-      // a fetch() call to your form endpoint (e.g. Formspree, Netlify Forms,
-      // EmailJS, or a custom API route).
-      status.textContent = translations[currentLang][successKey];
-      status.classList.add("show", "success");
-      form.reset();
+      var submitBtn = form.querySelector("button[type=submit]");
+      if (submitBtn) submitBtn.disabled = true;
+
+      var data = Object.fromEntries(new FormData(form).entries());
+      data.formType = formType;
+
+      fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("Request failed");
+          status.textContent = translations[currentLang][successKey];
+          status.classList.add("show", "success");
+          form.reset();
+        })
+        .catch(function () {
+          status.textContent = translations[currentLang].form_error_generic;
+          status.classList.add("show", "error");
+        })
+        .finally(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 
-  wireForm("signup-form", "signup-status", "form_success_signup");
-  wireForm("contact-form", "contact-status", "form_success_contact");
+  wireForm("signup-form", "signup-status", "form_success_signup", "signup");
+  wireForm("contact-form", "contact-status", "form_success_contact", "contact");
 
   /* ---------------- Share buttons ---------------- */
   function initShareButtons() {
