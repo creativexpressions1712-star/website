@@ -46,7 +46,7 @@ module.exports = async function handler(req, res) {
         Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "CreativeXpressions website <onboarding@resend.dev>",
+        from: "CreativeXpressions website <no-reply@creativexpressions.nl>",
         to: [TO_EMAIL],
         reply_to: email,
         subject: subjectLine,
