@@ -63,8 +63,6 @@
       th_class: "Les",
       th_age: "Leeftijd",
       price_title: "Tarieven per maand",
-      price_note_youth: "Vrijgesteld van btw voor jongeren tot 21 jaar",
-      price_note_kor: "Vrijgesteld onder de Kleineondernemersregeling (KOR)",
 
       cal_eyebrow: "Plan je les in",
       cal_title: "Kalender",
@@ -180,8 +178,6 @@
       th_class: "Class",
       th_age: "Age",
       price_title: "Monthly rates",
-      price_note_youth: "VAT exempt for dancers under 21",
-      price_note_kor: "Exempt under the Dutch small business scheme (KOR)",
 
       cal_eyebrow: "Plan your class",
       cal_title: "Calendar",
