@@ -27,7 +27,7 @@
       hero_cta_signup: "Meld je aan voor een les",
       hero_cta_schedule: "Bekijk het rooster",
       hero_quote: "Ik wil mensen zien dansen en genieten op muziek die opbouwt en hoop geeft.",
-      hero_quote_cite: "— Oprichter, CreativeXpressions",
+      hero_quote_cite: "— Nadia Conner, CreativeXpressions",
 
       about_eyebrow: "Mijn verhaal",
       about_title: "Waarom CreativeXpressions bestaat",
@@ -144,7 +144,7 @@
       hero_cta_signup: "Sign up for a class",
       hero_cta_schedule: "View the schedule",
       hero_quote: "I want to see people dance and enjoy music that builds up and gives hope.",
-      hero_quote_cite: "— Founder, CreativeXpressions",
+      hero_quote_cite: "— Nadia Conner, CreativeXpressions",
 
       about_eyebrow: "My story",
       about_title: "Why CreativeXpressions exists",
