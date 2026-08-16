@@ -69,6 +69,7 @@
       cal_lead: "Onze vaste lesdagen zijn dinsdag en donderdag. Kijk in de kalender welke dag voor jouw leeftijdsgroep past.",
       cal_legend_tue: "Dinsdag &mdash; Modern/Jazz",
       cal_legend_thu: "Donderdag &mdash; Fusion",
+      cal_legend_holiday: "Schoolvakantie — geen les",
       cal_prev: "Vorige maand",
       cal_next: "Volgende maand",
 
@@ -184,6 +185,7 @@
       cal_lead: "Our regular class days are Tuesday and Thursday. Check the calendar to see which day fits your age group.",
       cal_legend_tue: "Tuesday &mdash; Modern/Jazz",
       cal_legend_thu: "Thursday &mdash; Fusion",
+      cal_legend_holiday: "School holiday — no class",
       cal_prev: "Previous month",
       cal_next: "Next month",
 
@@ -312,6 +314,19 @@
   var monthFormatterNl = new Intl.DateTimeFormat("nl-NL", { month: "long", year: "numeric" });
   var monthFormatterEn = new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric" });
 
+  var schoolHolidays = [
+    { start: "2026-10-10", end: "2026-10-18", nl: "Herfstvakantie", en: "Autumn break" },
+    { start: "2026-12-19", end: "2027-01-03", nl: "Kerstvakantie", en: "Christmas break" }
+  ];
+
+  function holidayForDate(date) {
+    var iso = date.getFullYear() + "-" + String(date.getMonth() + 1).padStart(2, "0") + "-" + String(date.getDate()).padStart(2, "0");
+    for (var i = 0; i < schoolHolidays.length; i++) {
+      if (iso >= schoolHolidays[i].start && iso <= schoolHolidays[i].end) return schoolHolidays[i];
+    }
+    return null;
+  }
+
   function renderCalendar() {
     var grid = document.querySelector(".calendar-grid");
     var heading = document.querySelector(".calendar-head h3");
@@ -348,9 +363,15 @@
       var cell = document.createElement("div");
       var cellDate = new Date(year, month, d);
       var weekday = cellDate.getDay(); // 0 Sun ... 2 Tue, 4 Thu
+      var holiday = holidayForDate(cellDate);
       var classes = ["day-cell"];
-      if (weekday === 2) classes.push("class-day", "tue");
-      if (weekday === 4) classes.push("class-day", "thu");
+      if (holiday) {
+        classes.push("holiday");
+        cell.title = currentLang === "nl" ? holiday.nl : holiday.en;
+      } else {
+        if (weekday === 2) classes.push("class-day", "tue");
+        if (weekday === 4) classes.push("class-day", "thu");
+      }
       if (cellDate.toDateString() === today.toDateString()) classes.push("today");
       cell.className = classes.join(" ");
       cell.textContent = String(d);
