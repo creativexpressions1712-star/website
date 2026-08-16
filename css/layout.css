@@ -211,6 +211,8 @@ section { padding-block: clamp(3.5rem, 8vw, 7rem); position: relative; }
 
 /* ---------- About / Soul & Body ---------- */
 .about .container { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: start; }
+.about-photo { float: right; margin: 0 0 1rem 1.75rem; max-width: 200px; }
+.about-photo img { display: block; width: 100%; border-radius: 20px; box-shadow: var(--shadow-md); }
 .about-story p { color: var(--color-text-muted); font-size: 1.02rem; margin: 0 0 1.1rem; }
 .about-story blockquote {
   margin: 1.6rem 0;
