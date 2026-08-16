@@ -38,7 +38,7 @@
 
       balance_title: "De Soul &amp; Body-balans",
       balance_1_title: "Techniek & gezondheid",
-      balance_1_text: "Elke les start met een warming-up gericht op techniek, mobiliteit en blessurepreventie, opgebouwd door een gecertificeerd danslerares.",
+      balance_1_text: "Elke les start met een warming-up gericht op techniek, mobiliteit en blessurepreventie.",
       balance_2_title: "Geloofsbeleving",
       balance_2_text: "Na de warming-up werken we aan Bijbelse dansinterpretatie en choreografie. Fysieke training gaat hand in hand met geloof en expressie.",
       balance_3_title: "Een veilige plek",
@@ -155,7 +155,7 @@
 
       balance_title: "The Soul &amp; Body balance",
       balance_1_title: "Technique & health",
-      balance_1_text: "Every class opens with a warm-up focused on technique, mobility and injury prevention, built by a certified dance instructor.",
+      balance_1_text: "Every class opens with a warm-up focused on technique, mobility and injury prevention.",
       balance_2_title: "Faith in motion",
       balance_2_text: "After the warm-up we work on biblical dance interpretation and choreography. Physical training goes hand in hand with faith and expression.",
       balance_3_title: "A safe place",
