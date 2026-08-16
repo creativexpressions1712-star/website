@@ -106,7 +106,7 @@
       contact_title: "Neem contact op",
       contact_lead: "Vragen over de lessen, workshops of samenwerkingen? Stuur een bericht.",
       contact_loc_title: "Locatie",
-      contact_loc_text: "Danszaal &mdash; adres op aanvraag",
+      contact_loc_text: "Operetteweg 41",
       contact_hours_title: "Lesdagen",
       contact_hours_text: "Dinsdag & donderdag, 10:00 &ndash; 22:00",
       contact_email_title: "E-mail",
@@ -221,7 +221,7 @@
       contact_title: "Get in touch",
       contact_lead: "Questions about classes, workshops or collaborations? Send us a message.",
       contact_loc_title: "Location",
-      contact_loc_text: "Dance studio &mdash; address on request",
+      contact_loc_text: "Operetteweg 41",
       contact_hours_title: "Class days",
       contact_hours_text: "Tuesday & Thursday, 10:00 &ndash; 22:00",
       contact_email_title: "Email",
@@ -445,7 +445,6 @@
     var shareLinks = {
       facebook: "https://www.facebook.com/sharer/sharer.php?u=" + pageUrl,
       whatsapp: "https://wa.me/?text=" + pageTitle + "%20" + pageUrl,
-      twitter: "https://twitter.com/intent/tweet?url=" + pageUrl + "&text=" + pageTitle,
       linkedin: "https://www.linkedin.com/sharing/share-offsite/?url=" + pageUrl,
       email: "mailto:?subject=" + pageTitle + "&body=" + pageUrl
     };
