@@ -57,6 +57,7 @@
       schedule_eyebrow: "Rooster & tarieven",
       schedule_title: "Lestijden per leeftijdsgroep",
       schedule_lead: "Vaste lessen op dinsdag en donderdag. Kies je leeftijdsgroep en meld je hieronder aan.",
+      schedule_start_date: "Lessen starten op 19 oktober 2026",
       tab_tue: "Dinsdag",
       tab_thu: "Donderdag",
       th_time: "Tijd",
@@ -69,7 +70,7 @@
       cal_lead: "Onze vaste lesdagen zijn dinsdag en donderdag. Kijk in de kalender welke dag voor jouw leeftijdsgroep past.",
       cal_legend_tue: "Dinsdag &mdash; Modern/Jazz",
       cal_legend_thu: "Donderdag &mdash; Fusion",
-      cal_legend_holiday: "Schoolvakantie — geen les",
+      cal_legend_holiday: "Geen les",
       cal_prev: "Vorige maand",
       cal_next: "Volgende maand",
 
@@ -173,6 +174,7 @@
       schedule_eyebrow: "Schedule & rates",
       schedule_title: "Class times by age group",
       schedule_lead: "Regular classes on Tuesday and Thursday. Pick your age group and sign up below.",
+      schedule_start_date: "Classes start October 19, 2026",
       tab_tue: "Tuesday",
       tab_thu: "Thursday",
       th_time: "Time",
@@ -185,7 +187,7 @@
       cal_lead: "Our regular class days are Tuesday and Thursday. Check the calendar to see which day fits your age group.",
       cal_legend_tue: "Tuesday &mdash; Modern/Jazz",
       cal_legend_thu: "Thursday &mdash; Fusion",
-      cal_legend_holiday: "School holiday — no class",
+      cal_legend_holiday: "No class",
       cal_prev: "Previous month",
       cal_next: "Next month",
 
@@ -314,13 +316,21 @@
   var monthFormatterNl = new Intl.DateTimeFormat("nl-NL", { month: "long", year: "numeric" });
   var monthFormatterEn = new Intl.DateTimeFormat("en-GB", { month: "long", year: "numeric" });
 
+  var launchDateIso = "2026-10-19";
   var schoolHolidays = [
     { start: "2026-10-10", end: "2026-10-18", nl: "Herfstvakantie", en: "Autumn break" },
     { start: "2026-12-19", end: "2027-01-03", nl: "Kerstvakantie", en: "Christmas break" }
   ];
 
+  function isoDate(date) {
+    return date.getFullYear() + "-" + String(date.getMonth() + 1).padStart(2, "0") + "-" + String(date.getDate()).padStart(2, "0");
+  }
+
   function holidayForDate(date) {
-    var iso = date.getFullYear() + "-" + String(date.getMonth() + 1).padStart(2, "0") + "-" + String(date.getDate()).padStart(2, "0");
+    var iso = isoDate(date);
+    if (iso < launchDateIso) {
+      return { nl: "Nog niet beschikbaar", en: "Not yet available" };
+    }
     for (var i = 0; i < schoolHolidays.length; i++) {
       if (iso >= schoolHolidays[i].start && iso <= schoolHolidays[i].end) return schoolHolidays[i];
     }

@@ -55,6 +55,17 @@ section { padding-block: clamp(3.5rem, 8vw, 7rem); position: relative; }
 .section-head p { margin: 0; color: var(--color-text-muted); font-size: var(--fs-lead); }
 .section-head.center { margin-inline: auto; text-align: center; }
 .section-head.center .eyebrow-row { justify-content: center; }
+.section-head p.start-date-badge {
+  display: inline-flex;
+  margin-top: 1.1rem;
+  padding: 0.5rem 1.1rem;
+  background: var(--color-purple-soft);
+  color: var(--color-purple-deep);
+  font-family: var(--font-body-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 999px;
+}
 
 /* ---------- Buttons ---------- */
 .btn {
