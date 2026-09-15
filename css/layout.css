@@ -300,12 +300,6 @@ table.schedule-table { width: 100%; border-collapse: collapse; min-width: 560px;
 .schedule-table td.time { font-family: var(--font-body-display); font-weight: 600; color: var(--color-primary-hover); white-space: nowrap; }
 .day-panel[hidden] { display: none; }
 
-.price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.1rem; margin-top: 2.5rem; }
-.price-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 16px; padding: 1.3rem 1.4rem; }
-.price-card h4 { margin: 0 0 0.3rem; font-size: 1rem; }
-.price-card .amount { font-family: var(--font-body-display); font-size: 1.6rem; color: var(--color-primary-hover); }
-.price-card .note { font-size: 0.82rem; color: var(--color-text-muted); margin-top: 0.3rem; }
-
 /* ---------- Calendar ---------- */
 .calendar-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 22px; padding: 1.8rem; box-shadow: var(--shadow-sm); }
 .calendar-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.4rem; }
