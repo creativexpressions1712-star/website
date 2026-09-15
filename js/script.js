@@ -63,7 +63,7 @@
       th_time: "Tijd",
       th_class: "Les",
       th_age: "Leeftijd",
-      th_rate: "Tarief per maand",
+      th_rate: "Tarieven per maand",
       price_title: "Tarieven per maand",
 
       cal_eyebrow: "Plan je les in",
@@ -181,7 +181,7 @@
       th_time: "Time",
       th_class: "Class",
       th_age: "Age",
-      th_rate: "Monthly rate",
+      th_rate: "Monthly rates",
       price_title: "Monthly rates",
 
       cal_eyebrow: "Plan your class",
